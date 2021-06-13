@@ -42,10 +42,7 @@ pipeline {
         stage('SonarQube Analytics') {
             steps {
                 withSonarQubeEnv('sonar-server') {
-                    mvn sonar:sonar \
-                    -Dsonar.projectKey=test \
-                    -Dsonar.host.url= \
-                    -Dsonar.login=5ffc5d1180ba218357e604fca010baeaa6202a6c
+                    sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
                 }
             }
         }
