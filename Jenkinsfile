@@ -44,7 +44,7 @@ pipeline {
                 withSonarQubeEnv('sonar-server') {
                     mvn sonar:sonar \
                     -Dsonar.projectKey=test \
-                    -Dsonar.host.url=http://15.223.50.70:9000 \
+                    -Dsonar.host.url= \
                     -Dsonar.login=5ffc5d1180ba218357e604fca010baeaa6202a6c
                 }
             }
